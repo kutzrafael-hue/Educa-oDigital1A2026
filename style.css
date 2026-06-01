@@ -1,3 +1,12 @@
-head {
-background-color: rgb(30, 30, 191);
-color:#FFFF
+header {
+background-color: rgb(22, 217, 220);
+color: #FFFFFF;
+text-align: center;
+max-width: 800px;
+margin: 0 auto;
+padding: 16px;
+}
+main {
+background-color: #FFFFFF;
+color: #183C63;
+}
