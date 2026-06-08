@@ -18,10 +18,19 @@
 <h2>Meu primeiro post</h2>
 <p>Por: Rafael Kutz</p>
  <p> Boas-vindos ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
-<button>👍<span>100000</span></button>
+<button>👍<span>10000</span></button>
+<button>👎<span>10000</span></button>
  <div>
 </main>
 </body>
+<script>
+const botao = document.querySelector("button");
+botao.addEventListener("click", botaoClicado);
+function botaoClicado() {
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
+</script>
 <script>
 const botao = document.querySelector("button");
 botao.addEventListener("click", botaoClicado);
