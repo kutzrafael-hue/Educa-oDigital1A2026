@@ -1,8 +1,11 @@
+body {
+    max-width: 100vw;
+}
+
 header {
     background-color: #07376b;
     color: #FFFFFF;
     text-align: center;
-    max-width: 800px;
     margin: 0 auto;
     padding: 16px;
 }
@@ -14,19 +17,29 @@ header {
 main {
     background-color: #09e477;
     color: #000000;
-    max-width: 800px;
     margin: 0 auto;
     padding: 16px;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 article {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #183C63;
+    margin: 16px;
     gap: 16px;
-    margin-bottom: 24px;
+    padding: 16px;
+    flex: 1 1 25%;
 }
 
 main img {
-    width: 80px;
     height: 80px;
     display: block;
 }
@@ -35,4 +48,3 @@ h2,
 p,
 button {
     margin-bottom: 12px;
-} 
