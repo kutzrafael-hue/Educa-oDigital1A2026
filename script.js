@@ -1,13 +1,54 @@
- const btnTema = document.querySelector(".btn-tema-escuro");
+const botoes = document.querySelectorAll("button");
 
-btnTema.addEventListener("click", mudarTema);
+botoes.forEach(function (botao) {
+    let curtiu = false;
+        botoes.forEach(function (botao) {
+            let curtiu = false;
 
-function mudarTema() {
-  document.body.classList.toggle("tema-escuro");
+    botao.addEventListener("click", botaoClicado);
+            botao.addEventListener("click", botaoClicado);
 
-  if (document.body.classList.contains("tema-escuro")) {
-    btnTema.textContent = "☀️ Tema Claro";
-  } else {
-    btnTema.textContent = "🌙 Tema Escuro";
-  }
+    function botaoClicado() {
+        let texto = botao.querySelector("span");
+            function botaoClicado() {
+                let texto = botao.querySelector("span");
+
+        if (curtiu === false) {
+            texto.textContent++;
+            curtiu = true;
+        } else {
+            texto.textContent--;
+            curtiu = false;
+        }
+    }
+});
+                if (curtiu === false) {
+                    texto.textContent++;
+                    curtiu = true;
+                } else {
+                    texto.textContent--;
+                    curtiu = false;
+                }
+            }
+        });
+
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+const btnTemaEscuro =document.querySelector(".btn-tema-escuro");
+
+ btnTemaEscuro.addEventListener("click", mudaTema);
+btnTemaEscuro.addEventListener("click", mudaTema);
+
+function mudaTema() {
+function  mudaTema() {
+    const corpoPagina = document.body;
+
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+if (corpoPagina.classList.contains("tema-escuro")) {
+    corpoPagina.classList.remove("tema-escuro");
+} else {
+    corpoPagina.classList.add("tema-escuro");
+    }
 }
