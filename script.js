@@ -1,4 +1,21 @@
-// Seleciona apenas os botões de reação dentro dos artigos
+// Seleciona o botão de alterar tema
+const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
+
+// Adiciona o evento de clique ao botão
+btnTemaEscuro.addEventListener("click", mudaTema);
+
+// Função que altera a classe no body
+function mudaTema() {
+    const corpoPagina = document.body;
+
+    if (corpoPagina.classList.contains("tema-escuro")) {
+        corpoPagina.classList.remove("tema-escuro");
+    } else {
+        corpoPagina.classList.add("tema-escuro");
+    }
+}
+
+// Lógica para os botões de reação dos artigos
 const botoesReacao = document.querySelectorAll("article button");
 
 botoesReacao.forEach(function (botao) {
@@ -19,12 +36,3 @@ botoesReacao.forEach(function (botao) {
         }
     });
 });
-
-// Lógica para alternar o tema escuro/claro
-const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
-
-if (btnTemaEscuro) {
-    btnTemaEscuro.addEventListener("click", function () {
-        document.body.classList.toggle("tema-escuro");
-    });
-}
