@@ -1,176 +1,69 @@
-/* Variáveis para controle de cores e temas */
 :root {
+    --cor-primaria: #2563eb;
     --bg-color: #f4f6f8;
     --card-bg: #ffffff;
     --text-color: #333333;
-    --text-muted: #666666;
-    --primary-color: #2563eb;
     --border-color: #e5e7eb;
-    --btn-bg: #eef2ff;
-    --btn-hover: #e0e7ff;
 }
 
 body.tema-escuro {
     --bg-color: #0f172a;
     --card-bg: #1e293b;
     --text-color: #f8fafc;
-    --text-muted: #94a3b8;
     --border-color: #334155;
-    --btn-bg: #334155;
-    --btn-hover: #475569;
-}
-
-/* Estilos Gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-    padding-bottom: 40px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Cabeçalho */
-header {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: var(--card-bg);
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2rem;
-}
-
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-}
-
+/* Estilo do botão flutuante de tema */
 .btn-tema-escuro {
-    background-color: var(--btn-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 32px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    border: none;
     cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.2s;
+}:root {
+    --cor-primaria: #2563eb;
+    --bg-color: #f4f6f8;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --border-color: #e5e7eb;
 }
 
-.btn-tema-escuro:hover {
-    background-color: var(--btn-hover);
+body.tema-escuro {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --border-color: #334155;
 }
 
-/* Layout Principal (Grid de Artigos) */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Cartões de Artigos */
-article {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-article:hover {
-    transform: translateY(-2px);
-}
-
-article img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    background-color: #cbd5e1;
-}
-
-article > div {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-/* Textos do Artigo */
-article h2 {
-    font-size: 1.4rem;
+body {
+    background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
-.artigo-autor {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-weight: 600;
-}
-
-.artigo-fonte {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-top: 0.5rem;
-}
-
-.artigo-fonte a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.artigo-fonte a:hover {
-    text-decoration: underline;
-}
-
-/* Botoes de Reacao */
-article button {
-    align-self: flex-start;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    background-color: var(--btn-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 0.4rem 0.8rem;
-    border-radius: 8px;
+/* Estilo do botão flutuante de tema */
+.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 32px;
+    padding: 12px;
+    background-color: var(--cor-primaria);
+    border-radius: 50%;
+    border: none;
     cursor: pointer;
-    margin-right: 0.5rem;
-    margin-top: 0.5rem;
-    transition: background-color 0.2s;
-}
-
-article button:hover {
-    background-color: var(--btn-hover);
-}
-
-/* Ajustes para telas maiores (Desktop) */
-@media (min-width: 640px) {
-    article {
-        flex-direction: row;
-    }
-
-    article img {
-        width: 250px;
-        height: 100%;
-        min-height: 200px;
-    }
-
-    article > div {
-        flex: 1;
-    }
 }
