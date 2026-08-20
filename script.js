@@ -1,54 +1,30 @@
-const botoes = document.querySelectorAll("button");
+// Seleciona apenas os botões de reação dentro dos artigos
+const botoesReacao = document.querySelectorAll("article button");
 
-botoes.forEach(function (botao) {
+botoesReacao.forEach(function (botao) {
     let curtiu = false;
-        botoes.forEach(function (botao) {
-            let curtiu = false;
 
-    botao.addEventListener("click", botaoClicado);
-            botao.addEventListener("click", botaoClicado);
-
-    function botaoClicado() {
+    botao.addEventListener("click", function () {
         let texto = botao.querySelector("span");
-            function botaoClicado() {
-                let texto = botao.querySelector("span");
+        if (!texto) return;
 
-        if (curtiu === false) {
-            texto.textContent++;
+        let contador = parseInt(texto.textContent);
+
+        if (!curtiu) {
+            texto.textContent = contador + 1;
             curtiu = true;
         } else {
-            texto.textContent--;
+            texto.textContent = contador - 1;
             curtiu = false;
         }
-    }
+    });
 });
-                if (curtiu === false) {
-                    texto.textContent++;
-                    curtiu = true;
-                } else {
-                    texto.textContent--;
-                    curtiu = false;
-                }
-            }
-        });
 
+// Lógica para alternar o tema escuro/claro
 const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
-const btnTemaEscuro =document.querySelector(".btn-tema-escuro");
 
- btnTemaEscuro.addEventListener("click", mudaTema);
-btnTemaEscuro.addEventListener("click", mudaTema);
-
-function mudaTema() {
-function  mudaTema() {
-    const corpoPagina = document.body;
-
-    if (corpoPagina.classList.contains("tema-escuro")) {
-        corpoPagina.classList.remove("tema-escuro");
-    } else {
-        corpoPagina.classList.add("tema-escuro");
-if (corpoPagina.classList.contains("tema-escuro")) {
-    corpoPagina.classList.remove("tema-escuro");
-} else {
-    corpoPagina.classList.add("tema-escuro");
-    }
+if (btnTemaEscuro) {
+    btnTemaEscuro.addEventListener("click", function () {
+        document.body.classList.toggle("tema-escuro");
+    });
 }
